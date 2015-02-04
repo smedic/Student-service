@@ -85,6 +85,19 @@ def updateStudent():
     studenti.saveStudents()
 
 
+def searchStudents():
+    print("[2] Pretrazivanje studenata\n")
+    prezime = input("Unesite prezime >> ")
+    studList = studenti.searchStudents('prezime', prezime)
+    if len(studList) == 0:
+        print("\nNema trazenih studenata.")
+    else:
+        print('\n')
+    print(studenti.formatHeader())
+    print(studenti.formatStudents(studList))
+
+
+
 def addStudent():
     print("[5] Upis novog studenta\n")
     stud = {}
@@ -107,13 +120,17 @@ def advanceStudents():
     indeks = input("Unesite indeks studenta koji upisuje narednu godinu (<Enter> za kraj) >> ")
     while indeks != '':
         stud = studenti.findStudent(indeks)
-    if stud == None:
-        print("Ne postoji student sa datim brojem indeksa.")
-    else:
-        studenti.advanceStudent(stud)
-    print("Student", indeks, "je upisan u narednu godinu.")
-    indeks = input("Unesite indeks studenta koji upisuje narednu godinu (<Enter> za kraj) >> ")
+        if stud == None:
+            print("Ne postoji student sa datim brojem indeksa.")
+        else:
+            studenti.advanceStudent(stud)
+            print("Student", indeks, "je upisan u narednu godinu.")
+        indeks = input("Unesite indeks studenta koji upisuje narednu godinu (<Enter> za kraj) >> ")
     studenti.saveStudents()
+
+if __name__ == '__main__':
+    main()
+
 
 
 
