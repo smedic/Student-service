@@ -52,6 +52,7 @@ def formatAllStudents():
 
 
 def loadStudents():
+    print("Load students!")
     checkFile()
     for line in open('studenti.txt', 'r').readlines():
         if len(line) > 1:
@@ -67,7 +68,7 @@ def saveStudents():
     for stud in studenti:
         file.write(student2str(stud))
         file.write('\n')
-        file.close()
+    file.close()
 
 
 def checkFile():
@@ -76,6 +77,11 @@ def checkFile():
 
 
 # list operations
+def findStudent(indeks):
+    for stud in studenti:
+        if stud['indeks'] == indeks:
+            return stud
+    return None
 
 
 def searchStudents(field, value):
@@ -171,7 +177,7 @@ if __name__ == "__main__":
     main()
 
 
-
+loadStudents()
 
 
 
