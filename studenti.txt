@@ -1,0 +1,3 @@
+E1 | Milojko | Pantic | Mitar | 10.10.1999 | 123456789 | 4 jula 22 | 021 444 555 | miki@gmail.com | 2
+E2 | Stevan | Medic | Nikola | 25.05.1990 | 43223232 | 4 jula 74 | 022 587 827 | vanste25@gmail.com | 1
+SIT | Pera | Peric | Miki | 11.02.1994 | 434343 | 1. novembra 22 | 012 033 333 | peki@gmail.com | 3
